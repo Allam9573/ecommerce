@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% include 'includes/navbar.html'%}
+{% block content %}
+<div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <form action="{{url_for('auth.register')}}">
+                <div class="mb-3">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="apellido" class="form-control" placeholder="Apellido" id="">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="telefono" class="form-control" placeholder="Telefono" id="">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="correo" class="form-control" placeholder="Correo" id="">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="contrasenia" class="form-control" placeholder="Contrasenia" id="">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="w-100 btn btn-success" value="Iniciar Sesion">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

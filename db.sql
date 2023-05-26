@@ -6,3 +6,9 @@ create table products(
     precio decimal(10,2) not null,
     imagen text not null
 );
+create table vendedores(
+    id primary key auto_increment,
+    nombre varchar(100) not null,
+    correo varchar(100) not null
+)
+select * from products;
