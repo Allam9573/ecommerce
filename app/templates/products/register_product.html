@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% include 'includes/navbar.html' %}
+{% block content %}
+<div class="d-flex vw-100 vh-100 justify-content-center align-items-center">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            <h5 class="card-title">Nuevo producto</h5>
+        </div>
+        <div class="card-body">
+            <form action="{{url_for('product.register_product')}}" method="post">
+                <div class="mb-3">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Descripcion">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="precio" class="form-control" placeholder="Precio">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="imagen" class="form-control" placeholder="URL imagen">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Agregar Producto</button>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
