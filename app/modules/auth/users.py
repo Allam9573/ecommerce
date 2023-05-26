@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from app.modules.db.db import get_connection
+
 bp = Blueprint('auth', __name__, url_prefix='/users')
 
 
@@ -20,4 +21,10 @@ def register():
         cursor = conexion.cursor(buffered=True)
         cursor.execute('INSERT usuarios(nombre,apellido,correo,telefono,contrasenia) VALUES(%s,%s,%s,%s,%s)',
                        (nombre, apellido, correo, telefono, contrasenia))
+        conexion.commit()
     return render_template('auth/register.html')
+
+
+@bp.route('list')
+def list_users():
+    pass
