@@ -19,7 +19,7 @@ def register_product():
     return render_template('products/register_product.html')
 
 
-@bp.route('/shop')
+@bp.route('/products')
 def list_products():
     conexion = get_connection()
     cursor = conexion.cursor(buffered=True)

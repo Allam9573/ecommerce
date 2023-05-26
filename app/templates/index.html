@@ -15,7 +15,7 @@
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/fontawesome.min.css')}}">
 <!--
     
 TemplateMo 559 Zay Shop
@@ -345,8 +345,8 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-auto">
                     <label class="sr-only" for="subscribeEmail">Email address</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                        <input type="text" class="form-control bg-dark text-white border-light" id="subscribeEmail" placeholder="Email address">
+                        <button class="input-group-text btn-success text-white">Subscribe</button>
                     </div>
                 </div>
             </div>
