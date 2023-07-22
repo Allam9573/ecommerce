@@ -12,5 +12,3 @@ create table vendedores(
     correo varchar(100) not null
 )
 select * from products;
-
-localhost:5000/admin

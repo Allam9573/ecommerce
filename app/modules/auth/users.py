@@ -6,6 +6,8 @@ bp = Blueprint('auth', __name__, url_prefix='/users')
 
 @bp.route('/login', methods=['POST', 'GET'])
 def login():
+    if request.method == 'POST':
+        pass
     return render_template('auth/login.html')
 
 
@@ -22,6 +24,7 @@ def register():
         cursor.execute('INSERT usuarios(nombre,apellido,correo,telefono,contrasenia) VALUES(%s,%s,%s,%s,%s)',
                        (nombre, apellido, correo, telefono, contrasenia))
         conexion.commit()
+        return render_template('auth/success.html')
     return render_template('auth/register.html')
 
 
